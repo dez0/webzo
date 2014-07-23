@@ -101,7 +101,7 @@ class NewMailer < Mailer
 end
 ```
 
-This is an example of the new when statement in the `/mailer.rb` file.
+This is an example of the new `when` statement in the `/mailer.rb` file.
 ```
 unless params[:type].nil?
   mailer = case params[:type]
