@@ -1,7 +1,7 @@
 SEND_EMAIL worker
 ======
 #Prerequisite
-In order to work, configuration parameters need to be set in the worker's code section on Iron.io HUD. [reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)
+In order to work, configuration parameters need to be set in the worker's code section on Iron.io HUD. [Reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)
 >  
 ```
 {
@@ -25,13 +25,12 @@ For all types of mailer, these parameters are required by the worker :
 * `from`: string, required, email address of the sender.
 * `subject`: string, required, subject of the email. Refer to a I18n key in locales directory.
 
-##Confirmed/Incomplete mailer parameters
+##Confirmed/Incomplete/Malicious mailer parameters
 ####Required
 * `remote_layout`: string, required, retailer's remote layout of the email body.
 * `shopping_cart`: shopping_cart object, required, general information about the shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart.rb)
 * `customer`: array of key/value pairs, required, general information about the customer.
 * `items`: array item objects, required, item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart_item.rb)
-* `taxes`: array of key/value pairs, required, contains information about shopping cart taxes.
 * `total`: array of key/value pairs, required, contains information about shopping cart totals (subtotal, shipping, taxes, total).
 
 ####Optional
@@ -41,8 +40,7 @@ For all types of mailer, these parameters are required by the worker :
 * `fulfillment`: array of key/value pairs, information about order fulfiller(s).
 * `promo`: array of promotion items object, promotion item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/promotion_cart_item.rb)
 * `special_instruction`: array of instruction string, special instruction or comments left by the customer.
-
-##Malicious mailer parameters
+* `taxes`: array of key/value pairs, required, contains information about shopping cart taxes.
 
 ##Simple mailer parameters
 ####Optional
