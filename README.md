@@ -40,7 +40,7 @@ For all types of mailer, these parameters are required by the worker :
 * `fulfillment`: array of key/value pairs, information about order fulfiller(s).
 * `promo`: array of promotion items object, promotion item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/promotion_cart_item.rb)
 * `special_instruction`: array of instruction string, special instruction or comments left by the customer.
-* `taxes`: array of key/value pairs, required, contains information about shopping cart taxes.
+* `taxes`: array of key/value pairs, contains information about shopping cart taxes.
 
 ##Simple mailer parameters
 ####Optional
