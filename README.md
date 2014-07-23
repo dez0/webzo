@@ -27,7 +27,6 @@ For all types of mailer, these parameters are required by the worker :
 
 ##Confirmed/Incomplete/Malicious mailer parameters
 ####Required
-* `remote_layout`: string, required, retailer's remote layout of the email body.
 * `shopping_cart`: shopping_cart object, required, general information about the shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart.rb)
 * `customer`: array of key/value pairs, required, general information about the customer.
 * `items`: array item objects, required, item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart_item.rb)
@@ -35,6 +34,7 @@ For all types of mailer, these parameters are required by the worker :
 
 ####Optional
 * `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
+* `remote_layout`: string, required, retailer's remote layout of the email body.
 * `pickup_address`: string, retailer's store address for picked up orders.
 * `transaction`: array of key/value pairs, transaction information from Desjardins payment.
 * `fulfillment`: array of key/value pairs, information about order fulfiller(s).
