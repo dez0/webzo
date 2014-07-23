@@ -72,7 +72,7 @@ For all types of mailer, these parameters are required by the worker :
 #How to add a new worker
 This is the procedure to add a new mailer to the worker
 
-1. 1st step
+1. Add new mailer class in the /mailers directory. Be sure to require the base mailer : `require 'lib/mailer'`
 2. 2nd step
 3. 3rd step
 4. 4th step
