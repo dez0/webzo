@@ -45,7 +45,7 @@ For all types of mailer, these parameters are required by the worker :
 ##Simple mailer parameters
 ####Optional
 * `content`: string, html content of the email body.
-* `layout`: string, the local layout of the email body.
+* `layout`: string, the local layout of the email body, included in the worker directory.
 * `remote_layout`: string, retailer's remote layout of the email body.
 * `layout_params`: array of key/value pairs, specific variables passed to the worker.
 * `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
