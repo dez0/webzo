@@ -73,7 +73,7 @@ For all types of mailer, these parameters are required by the worker :
 This is the procedure to add a new mailer to the worker
 
 1. Add new mailer class in the /mailers directory. Be sure to require the base mailer : `require 'lib/mailer'`
-2. 2nd step
-3. 3rd step
-4. 4th step
-5. 5th step
+2. In the initialize function of the new mailer, be sure to include the `super` clause to use the base mailer constructor. Also, you need to define `@to`, `@from`, `@subject` variables.
+3. Add a `get_body_content` function to tell how to build the `@body` of the email.
+4. Add a `when` clause for the new mailer type in the case statement in the mailer.rb file at the root directory of the worker.
+5. Send the parameters to the worker. Don't forget to specify the `type` in the sent parameters to use the new mailer.
