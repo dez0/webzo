@@ -13,7 +13,6 @@ For all types of mailer, these parameters are required by the worker :
 * `from`: string, required, email address of the sender.
 * `subject`: string, required, subject of the email. Refer to a I18n key in locales directory.
 
------------
 ##Confirmed mailer parameters
 ####Required
 * `remote_layout`: string, required, retailer's remote layout of the email body.
@@ -29,7 +28,6 @@ For all types of mailer, these parameters are required by the worker :
 * `promo`: array of promotion items object, promotion item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/promotion_cart_item.rb)
 * `special_instruction`: array of instruction string, special instruction or comments left by the customer.
 
------------
 ##Simple mailer parameters
 ####Optional
 * `content`: string, html content of the email body.
@@ -54,8 +52,7 @@ For all types of mailer, these parameters are required by the worker :
 </html>
 ```
 
------------
-##Parameters example
+###Parameters example
 >     params = { :type => "simple",
                :to => "vincent.desautels@gmail.com",
                :from => "info@dakis.com",
