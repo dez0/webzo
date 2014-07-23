@@ -19,20 +19,16 @@ SEND_EMAIL worker
 ###Local layout types
 * simple
 
->     params = { :type => "simple",
-               :to => "vincent.desautels@gmail.com",
-               :from => "info@dakis.com",
-               :subject => "simple_test",
-               :content => "<p>This is a simple test...</p>",
-               :layout => "simple",
-               :remote_layout => "http://bobsphoto.com/mailer.html",
-               :layout_params => {
-                  :title => "Test",
-                  :footer => "Copyright Dakis 2014"
-               },
-               :lang => "en"
-             }
- 
+>     
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <%= @body %>
+  </body>
+</html>
 
 -----------
 ##Parameters example
