@@ -67,3 +67,11 @@ For all types of mailer, these parameters are required by the worker :
                },
                :lang => "en"
              }
+
+#How to add a new worker
+This is the procedure to add a new mailer to the worker
+1. 1st step
+2. 2nd step
+3. 3rd step
+4. 4th step
+5. 5th step
