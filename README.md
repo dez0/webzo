@@ -1,8 +1,7 @@
 SEND_EMAIL worker
 ======
 #Prerequisite
-In order to send email, configuration parameters need to be set in the worker's code section on Iron.io HUD. [Reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)
->  
+In order to send email, configuration parameters need to be set in the worker's code section on Iron.io HUD. [Reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)  
 ```
 {
   "SMTP_ADDRESS"  : "address",
@@ -55,19 +54,21 @@ For all types of mailer, these parameters are required by the worker :
 * simple
 
 ####Simple mailer parameters example
->     params = { :type => "simple",
-               :to => "vincent.desautels@gmail.com",
-               :from => "info@dakis.com",
-               :subject => "simple_test",
-               :content => "<p>This is a simple test...</p>",
-               :layout => "simple",
-               :remote_layout => "http://bobsphoto.com/mailer.html",
-               :layout_params => {
-                  :title => "Test",
-                  :footer => "Copyright Dakis 2014"
-               },
-               :lang => "en"
-             }
+```
+params = { :type => "simple",
+		   :to => "vincent.desautels@gmail.com",
+		   :from => "info@dakis.com",
+		   :subject => "simple_test",
+		   :content => "<p>This is a simple test...</p>",
+		   :layout => "simple",
+		   :remote_layout => "http://bobsphoto.com/mailer.html",
+		   :layout_params => {
+			  :title => "Test",
+			  :footer => "Copyright Dakis 2014"
+		   },
+		   :lang => "en"
+		 }
+```
 
 #How to add a new worker
 This is the procedure to add a new mailer to the worker
@@ -78,7 +79,7 @@ This is the procedure to add a new mailer to the worker
 4. Add a `when` clause for the new mailer type in the case statement in the `mailer.rb` file at the root of the worker.
 5. Send the parameters to the worker. Don't forget to specify the `type` in the sent parameters to use the new mailer.
 
-####New mailer class example
+####New mailer example
 The `@h[]` contains the parameters sent to the worker.
 
 This is a example of the `mailer/newmailer.rb` file.
