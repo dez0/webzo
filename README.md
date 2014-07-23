@@ -2,7 +2,6 @@ SEND_EMAIL worker
 ======
 #Prerequisite
 In order to send email, configuration parameters need to be set in the worker's code section on Iron.io HUD. [Reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)
->  
 ```
 {
   "SMTP_ADDRESS"  : "address",
@@ -55,7 +54,8 @@ For all types of mailer, these parameters are required by the worker :
 * simple
 
 ####Simple mailer parameters example
->     params = { :type => "simple",
+```
+     params = { :type => "simple",
                :to => "vincent.desautels@gmail.com",
                :from => "info@dakis.com",
                :subject => "simple_test",
@@ -68,6 +68,7 @@ For all types of mailer, these parameters are required by the worker :
                },
                :lang => "en"
              }
+```
 
 #How to add a new worker
 This is the procedure to add a new mailer to the worker
@@ -81,21 +82,20 @@ This is the procedure to add a new mailer to the worker
 ####New mailer class example
 The `@h[]` contains the parameters sent to the worker.
 This is a example of the `mailer/newmailer.rb` file.
-
 ```
-  require 'lib/mailer'
+require 'lib/mailer'
 
-  class NewMailer < Mailer
-    def initialize params
-      super
-  
-      @to = @h["to"]
-      @from = @h["from"]
-      @subject = t(@h["subject"])
-    end
-  
-    def get_body_content
-      "Content of the email's body"
-    end
+class NewMailer < Mailer
+  def initialize params
+    super
+
+    @to = @h["to"]
+    @from = @h["from"]
+    @subject = t(@h["subject"])
   end
+
+  def get_body_content
+    "Content of the email's body"
+  end
+end
 ```
