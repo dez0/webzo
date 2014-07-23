@@ -50,10 +50,10 @@ For all types of mailer, these parameters are required by the worker :
 * `layout_params`: array of key/value pairs, specific variables passed to the worker.
 * `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
 
-###Local layout types
+####Local simple mailer layout types
 * simple
 
-###Parameters example
+####Simple mailer parameters example
 >     params = { :type => "simple",
                :to => "vincent.desautels@gmail.com",
                :from => "info@dakis.com",
