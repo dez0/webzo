@@ -37,7 +37,6 @@ For all types of mailer, these parameters are required by the worker :
 * `layout_params`: array of key/value pairs, specific variables passed to the worker.
 * `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
 
------------
 ###Local layout types
 * simple
 
