@@ -18,15 +18,7 @@ SEND_EMAIL worker
 -----------
 ###Local layout types
 * simple
->     <!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  </head>
-  <body>
-    <%= @body %>
-  </body>
-</html>
+> okok   
 
 -----------
 ##Parameters example
