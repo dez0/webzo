@@ -85,16 +85,15 @@ This is a example of the `mailer/newmailer.rb` file.
 >  
 ```
 require 'lib/mailer'
-
+```
 class NewMailer < Mailer
   def initialize params
     super
-
     @to = @h["to"]
     @from = @h["from"]
     @subject = t(@h["subject"])
   end
-
+```
   def get_body_content
     "Content of the email's body"
   end
