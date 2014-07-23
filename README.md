@@ -18,6 +18,7 @@ SEND_EMAIL worker
 -----------
 ###Local layout types
 * simple
+
 >     params = { :type => "simple",
                :to => "vincent.desautels@gmail.com",
                :from => "info@dakis.com",
