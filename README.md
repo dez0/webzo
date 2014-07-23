@@ -6,7 +6,7 @@ SEND_EMAIL worker
 *  Malicious
 *  Simple
 
-##Required parameters
+###Required parameters
 For all types of mailer, these parameters are required by the worker :
 * `type`: string, required, type of mail to send.
 * `to`: string, required, email address of the recipient.
