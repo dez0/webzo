@@ -17,9 +17,16 @@ For all types of mailer, these parameters are required by the worker :
 ##Confirmed mailer parameters
 ####Required
 * `remote_layout`: string, required, retailer's remote layout of the email body.
+* `shopping_cart`: shopping_cart object, required, general information about the shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart.rb)
+* `customer`: array of key/value pairs, required, general information about the customer.
+* `items`: array item objects, required, item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart_item.rb)
 
 ####Optional
 * `transaction`: array of key/value pairs, transaction information from Desjardins payment.
+* `fulfillment`: array of key/value pairs, information about order fulfiller(s).
+* `promo`: array of promotion items object, promotion item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/promotion_cart_item.rb)
+* `special_instruction`: array of instruction string, special instruction or comments left by the customer.
+* `total`: array of key/value pairs, contains information about shopping cart totals (subtotal, shipping, taxes, total).
 
 -----------
 ##Simple mailer parameters
@@ -29,6 +36,7 @@ For all types of mailer, these parameters are required by the worker :
 * `remote_layout`: string, retailer's remote layout of the email body.
 * `layout_params`: array of key/value pairs, specific variables passed to the worker.
 * `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
+
 -----------
 ###Local layout types
 * simple
