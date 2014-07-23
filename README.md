@@ -19,7 +19,9 @@ SEND_EMAIL worker
 ###Local layout types
 * simple
 
->     <!DOCTYPE html>
+>     
+```
+<!DOCTYPE html>
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
@@ -28,6 +30,7 @@ SEND_EMAIL worker
     <%= @body %>
   </body>
 </html>
+```
 
 -----------
 ##Parameters example
