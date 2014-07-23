@@ -82,7 +82,7 @@ This is the procedure to add a new mailer to the worker
 ####New mailer example
 The `@h[]` contains the parameters sent to the worker.
 
-This is a example of the `mailer/newmailer.rb` file.
+This is a example of the new `mailer/newmailer.rb` file.
 ```
 require 'lib/mailer'
 
@@ -101,7 +101,7 @@ class NewMailer < Mailer
 end
 ```
 
-This is an example of the new `when` statement in the `/mailer.rb` file.
+This is an example of the new `when` statement in root `mailer.rb` file.
 ```
 unless params[:type].nil?
   mailer = case params[:type]
