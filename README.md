@@ -20,6 +20,7 @@ For all types of mailer, these parameters are required by the worker :
 * `shopping_cart`: shopping_cart object, required, general information about the shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart.rb)
 * `customer`: array of key/value pairs, required, general information about the customer.
 * `items`: array item objects, required, item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart_item.rb)
+* `taxes`: array of key/value pairs, required, contains information about shopping cart taxes.
 * `total`: array of key/value pairs, required, contains information about shopping cart totals (subtotal, shipping, taxes, total).
 
 ####Optional
