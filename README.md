@@ -13,7 +13,7 @@ For all types of mailer, these parameters are required by the worker :
 * `from`: string, required, email address of the sender.
 * `subject`: string, required, subject of the email. Refer to a I18n key in locales directory.
 
-##Confirmed mailer parameters
+##Confirmed/Incomplete mailer parameters
 ####Required
 * `remote_layout`: string, required, retailer's remote layout of the email body.
 * `shopping_cart`: shopping_cart object, required, general information about the shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/shopping_cart.rb)
@@ -23,10 +23,13 @@ For all types of mailer, these parameters are required by the worker :
 * `total`: array of key/value pairs, required, contains information about shopping cart totals (subtotal, shipping, taxes, total).
 
 ####Optional
+* `pickup_address`: string, retailer's store address for picked up orders.
 * `transaction`: array of key/value pairs, transaction information from Desjardins payment.
 * `fulfillment`: array of key/value pairs, information about order fulfiller(s).
 * `promo`: array of promotion items object, promotion item(s) in shopping cart. [Reference] (https://github.com/dakis/base/blob/dev/lib/promotion_cart_item.rb)
 * `special_instruction`: array of instruction string, special instruction or comments left by the customer.
+
+##Malicious mailer parameters
 
 ##Simple mailer parameters
 ####Optional
@@ -38,19 +41,6 @@ For all types of mailer, these parameters are required by the worker :
 
 ###Local layout types
 * simple
-
->     
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-  </head>
-  <body>
-    <%= @body %>
-  </body>
-</html>
-```
 
 ###Parameters example
 >     params = { :type => "simple",
