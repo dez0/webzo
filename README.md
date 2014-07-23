@@ -1,7 +1,7 @@
 SEND_EMAIL worker
 ======
 #Prerequisite
-In order to work, configuration parameters need to be set in the worker's code section on Iron.io HUD. [Reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)
+In order to send email, configuration parameters need to be set in the worker's code section on Iron.io HUD. [Reference] (http://dev.iron.io/worker/reference/configuration-variables/#config-via-hud)
 >  
 ```
 {
