@@ -1,5 +1,17 @@
 SEND_EMAIL worker
 ======
+#Prerequisite
+In order to work, confoguration parameters need to be set in the worker's code section on Iron.io HUD.
+>  
+```
+{
+  "SMTP_ADDRESS"  : "address",
+  "SMTP_PORT"     : "port",
+  "SMTP_USERNAME" : "username",
+  "SMTP_PASSWORD" : "password"
+}
+```
+
 #Types of mailer
 *  Confirmed
 *  Incomplete
@@ -23,6 +35,7 @@ For all types of mailer, these parameters are required by the worker :
 * `total`: array of key/value pairs, required, contains information about shopping cart totals (subtotal, shipping, taxes, total).
 
 ####Optional
+* `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
 * `pickup_address`: string, retailer's store address for picked up orders.
 * `transaction`: array of key/value pairs, transaction information from Desjardins payment.
 * `fulfillment`: array of key/value pairs, information about order fulfiller(s).
