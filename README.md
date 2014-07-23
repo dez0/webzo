@@ -81,7 +81,8 @@ This is the procedure to add a new mailer to the worker
 ####New mailer class example
 The `@h[]` contains the parameters sent to the worker.
 This is a example of the `mailer/newmailer.rb` file.
->
+
+>  
 ```
 require 'lib/mailer'
 
