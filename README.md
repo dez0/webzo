@@ -34,7 +34,7 @@ For all types of mailer, these parameters are required by the worker :
 
 ####Optional
 * `lang`: string, language of the email, used by I18n. DEFAULT: 'en'.
-* `remote_layout`: string, required, retailer's remote layout of the email body.
+* `remote_layout`: string, retailer's remote layout of the email body.
 * `pickup_address`: string, retailer's store address for picked up orders.
 * `transaction`: array of key/value pairs, transaction information from Desjardins payment.
 * `fulfillment`: array of key/value pairs, information about order fulfiller(s).
