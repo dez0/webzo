@@ -19,7 +19,8 @@ SEND_EMAIL worker
 ###Local layout types
 * simple
 
->     ```
+>     
+```
 <!DOCTYPE html>
 <html>
   <head>
