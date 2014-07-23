@@ -81,18 +81,17 @@ This is the procedure to add a new mailer to the worker
 ####New mailer class example
 The `@h[]` contains the parameters sent to the worker.
 This is a example of the `mailer/newmailer.rb` file.
-
 >  require 'lib/mailer'
->  
+
 >  class NewMailer < Mailer
 >    def initialize params
 >      super
->  
+  
 >      @to = @h["to"]
 >      @from = @h["from"]
 >      @subject = t(@h["subject"])
 >    end
->  
+  
 >    def get_body_content
 >      "Content of the email's body"
 >    end
