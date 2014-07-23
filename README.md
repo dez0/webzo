@@ -113,8 +113,8 @@ unless params[:type].nil?
             MaliciousMailer.new params
           when "simple"
             SimpleMailer.new params
-		  when "new"
-			NewMailer.new params
+          when "new"
+            NewMailer.new params
       end
 
   mailer.build_body
