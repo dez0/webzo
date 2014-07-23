@@ -12,16 +12,16 @@ For all types of mailer, these parameters are required by the worker :
 * `to`: string, required, email address of the recipient.
 * `from`: string, required, email address of the sender.
 * `subject`: string, required, subject of the email. Refer to a I18n key in locales directory.
------------
 
+-----------
 ##Confirmed mailer parameters
 ####Required
 * `remote_layout`: string, required, retailer's remote layout of the email body.
 
 ####Optional
 * `transaction`: array of key/value pairs, transaction information from Desjardins payment.
------------
 
+-----------
 ##Simple mailer parameters
 ####Optional
 * `content`: string, html content of the email body.
